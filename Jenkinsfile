@@ -19,6 +19,6 @@ pipeline {
     //      sh 'docker build -t myapp .'
     //      sh 'docker push myrepo/myapp'
     //    }
-     }
+     //}
    }
 }
