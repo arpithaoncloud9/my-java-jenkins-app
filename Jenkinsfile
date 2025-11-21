@@ -14,11 +14,11 @@ pipeline {
          sh 'mvn test'
        }
      }
-    //  stage('Deploy') {
+     stage('Deploy') {
     //    steps {
     //      sh 'docker build -t myapp .'
     //      sh 'docker push myrepo/myapp'
     //    }
-    //  }
+     }
    }
 }
