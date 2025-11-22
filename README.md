@@ -1,2 +1,2 @@
 # my-java-jenkins-app
-Simple App to integrate with Jenkins
+Simple App project to integrate with Jenkins
