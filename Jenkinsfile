@@ -22,19 +22,25 @@ pipeline {
        }
      }
      
-     stage('Docker Build & Push') {
+stage('Docker Build & Push') {
     steps {
-    echo 'Docker image pushed to Docker Hub'  
+        echo 'Starting Docker login and image push'
+
         withCredentials([usernamePassword(credentialsId: 'docker-token',
                                          usernameVariable: 'DOCKER_USER',
                                          passwordVariable: 'DOCKER_PASS')]) {
-            sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+            sh '''
+            mkdir -p $HOME/.docker
+            echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+            '''
         }
+
         sh 'docker build -t arpithaoncloud9/my-java-new-app:latest .'
         sh 'docker push arpithaoncloud9/my-java-new-app:latest'
+
+        echo 'Docker image pushed successfully'
     }
 }
-
 
    }
 }
