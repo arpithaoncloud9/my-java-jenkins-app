@@ -24,17 +24,16 @@ pipeline {
      
 stage('Docker Build & Push') {
     steps {
-        echo 'Starting Docker login and image push'
+        echo 'Start Docker login and image push'
 
+        // Login to Docker Hub using Jenkins credentials
         withCredentials([usernamePassword(credentialsId: 'docker-token',
                                          usernameVariable: 'DOCKER_USER',
                                          passwordVariable: 'DOCKER_PASS')]) {
-            sh '''
-            mkdir -p $HOME/.docker
-            echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-            '''
+            sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
         }
 
+        // Build and push image
         sh 'docker build -t arpithaoncloud9/my-java-new-app:latest .'
         sh 'docker push arpithaoncloud9/my-java-new-app:latest'
 
