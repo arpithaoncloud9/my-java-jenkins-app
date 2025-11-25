@@ -24,6 +24,7 @@ pipeline {
      
      stage('Docker Build & Push') {
          steps {
+          echo 'Building and pushing Docker image'
             sh 'docker build -t myrepo/myapp:latest .'
             sh 'docker push myrepo/myapp:latest'
          }
