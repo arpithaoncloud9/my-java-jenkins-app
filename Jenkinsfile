@@ -23,12 +23,17 @@ pipeline {
      }
      
      stage('Docker Build & Push') {
-         steps {
-          echo 'Build and push Docker image'
-            sh 'docker build -t arpithaoncloud9/my-java-new-app:latest .'
-            sh 'docker push arpithaoncloud9/my-java-new-app:latest'
-         }
-      }
+    steps {
+        withCredentials([usernamePassword(credentialsId: 'dockerhub-creds',
+                                         usernameVariable: 'DOCKER_USER',
+                                         passwordVariable: 'DOCKER_PASS')]) {
+            sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+        }
+        sh 'docker build -t arpithaoncloud9/my-java-new-app:latest .'
+        sh 'docker push arpithaoncloud9/my-java-new-app:latest'
+    }
+}
+
 
    }
 }
