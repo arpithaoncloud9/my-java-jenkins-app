@@ -24,6 +24,7 @@ pipeline {
      
      stage('Docker Build & Push') {
     steps {
+    echo 'Docker image pushed to Docker Hub'  
         withCredentials([usernamePassword(credentialsId: 'dockerhub-creds',
                                          usernameVariable: 'DOCKER_USER',
                                          passwordVariable: 'DOCKER_PASS')]) {
