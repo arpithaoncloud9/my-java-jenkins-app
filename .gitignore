@@ -1,0 +1,6 @@
+target/classes/com/myapp/myapp/MyappApplication.class
+target/maven-archiver/pom.properties
+*.lst
+*.jar
+*.original
+target/

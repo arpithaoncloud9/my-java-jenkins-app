@@ -21,11 +21,13 @@ pipeline {
          echo 'Build completed successfully' 
        }
      }
-     // stage('Deploy') {
-     //   steps {
-     //    sh 'docker build -t myapp .'
-     //     sh 'docker push myrepo/myapp'
-     //   }
-     // }
+     
+     stage('Docker Build & Push') {
+         steps {
+            sh 'docker build -t myrepo/myapp:latest .'
+            sh 'docker push myrepo/myapp:latest'
+         }
+      }
+
    }
 }
