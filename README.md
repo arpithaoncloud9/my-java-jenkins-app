@@ -1,4 +1,4 @@
-[**End-to-End DevOps Project: Building, Deploying, and Monitoring a Full-Stack Application**](https://dev.to/prodevopsguytech/end-to-end-devops-project-building-deploying-and-monitoring-a-full-stack-application-ako)
+End-to-End DevOps Project: Building, Deploying, and Monitoring a Full-Stack Application
 
 ## Step 1: Download and install AWS cli using home-brew (Mac)
 
