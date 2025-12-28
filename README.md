@@ -249,8 +249,7 @@ my-alb-143008138.us-east-2.elb.amazonaws.com //It should route traffic to your E
 ## Step:5 Setting Up Jenkins Pipelines
 ### 5.1 Jenkinsfile 
 
-1. **Define a Jenkinsfile:**
- ```
+1. **Define a Jenkinsfile:** ```
  pipeline {
 
    agent any
@@ -296,13 +295,14 @@ my-alb-143008138.us-east-2.elb.amazonaws.com //It should route traffic to your E
      }
 
    } 
-  ```
+ ```
   2. **Trigger the Pipeline:**
     - Create a repository in GitHub.
     - Commit and push the Jenkinsfile to your repository.
     - Jenkins looks for a file named `Jenkinsfile` at the root of your  repository and automatically triggers the build.
 
-<img width="2682" height="1552" alt="image" src="https://github.com/user-attachments/assets/16b85e59-e738-43b7-bd62-3e10caa278a7" />
+<img width="2682" height="1552" alt="image" src="https://github.com/user-attachments/assets/ef7209a6-2007-47d5-b7b8-16bb12a679e5" />
+
 
 
  3. **Build the Pipeline (For manual build):** 
