@@ -442,9 +442,8 @@ docker ps
   ```
 ### 7.2Verify Application
 
-1. **Open in browser.** 
-```
-http://<ec2-public-ip>:8081/hello  //Mention the endpoint
+1. **Open in browser.**
+```http://<ec2-public-ip>:8081/hello  //Mention the endpoint
 ```
 
 <img width="1802" height="1094" alt="image" src="https://github.com/user-attachments/assets/53283451-32a8-4fa7-81e3-7addb511f70c" />
