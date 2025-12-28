@@ -302,6 +302,9 @@ my-alb-143008138.us-east-2.elb.amazonaws.com //It should route traffic to your E
     - Commit and push the Jenkinsfile to your repository.
     - Jenkins looks for a file named `Jenkinsfile` at the root of your  repository and automatically triggers the build.
 
+<img width="2682" height="1552" alt="image" src="https://github.com/user-attachments/assets/16b85e59-e738-43b7-bd62-3e10caa278a7" />
+
+
  3. **Build the Pipeline (For manual build):** 
     - Click **Build Now**.
     - Jenkins will pull the code and  run the pipeline. 
@@ -342,7 +345,9 @@ docker push <dockerhub-username>/my-java-new-app:latest
 7. **Verify.**
 ```
 docker pull <dockerhub-username>/my-java-new-app:latest
-``` 
+```
+<img width="2312" height="1294" alt="image" src="https://github.com/user-attachments/assets/f2b59aa0-df3d-46af-9ea4-175bd32cd8ba" />
+
 ### 6.2 Docker Compose for Local Development: (For multi-container appl)
 
 1. **Create a `docker-compose.yml` File:**
@@ -441,6 +446,10 @@ docker ps
 ```
 http://<ec2-public-ip>:8081/hello  //Mention the endpoint
 ```
+
+<img width="1802" height="1094" alt="image" src="https://github.com/user-attachments/assets/53283451-32a8-4fa7-81e3-7addb511f70c" />
+
+
 ### 7.3 Automated Deployment Via Jenkins Pipeline
 
 1. **Deploy the Dockerized Java application onto EC2 directly from the Jenkins pipeline.**
@@ -484,6 +493,11 @@ stage('Docker Build & Push') {
 ```
 http://my-alb-143008138.us-east-2.elb.amazonaws.com/hello
 ```
+<img width="2088" height="806" alt="image" src="https://github.com/user-attachments/assets/7881e7cf-8c70-435c-bf98-9539f050da07" />
+
+<img width="2840" height="1438" alt="image" src="https://github.com/user-attachments/assets/f45351ac-8045-44d2-bfaa-25cbf157dc37" />
+
+
 ## Step:8 Connect to RDS from EC2 (Applicable only for Production)
 
 ### 8.1 Setting Up RDS Database
@@ -511,6 +525,7 @@ mysql -h <RDS-endpoint> -u <user> -p //Provide username and PW
 SHOW DATABASES;
 ```
 
+<img width="1700" height="902" alt="image" src="https://github.com/user-attachments/assets/dfda46f8-ab9a-4e0e-af05-f12dc19e177a" />
 
 
   
