@@ -536,7 +536,7 @@ SHOW DATABASES;
 - Implemented secure database integration by provisioning **RDS MySQL**, configuring SG rules, and validating EC2 → RDS connectivity using MySQL CLI
 - Verified ALB routing, health checks, and application availability through ALB DNS endpoints
 - Achieved a production‑ready setup with CI/CD pipelines, containerized workloads, automated deployments, and secure database connectivity
-- Documented the entire journey (Day 1 → Day 6) as part of the **Cloud & DevOps Learning Curve Series**, showcasing real‑world DevOps workflows
+
 
   
 
