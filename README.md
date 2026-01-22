@@ -526,6 +526,17 @@ SHOW DATABASES;
 
 <img width="1700" height="902" alt="image" src="https://github.com/user-attachments/assets/dfda46f8-ab9a-4e0e-af05-f12dc19e177a" />
 
+## Outcome:
+  - Designed and deployed a complete AWS infrastructure using a custom VPC, subnets, route tables, Internet Gateway, Security Groups, EC2, ALB, and RDS MySQL
+- Built the entire environment using **AWS CLI**, ensuring automation, reproducibility, and infrastructure consistency
+- Installed and configured **Jenkins** on EC2, integrated GitHub via webhooks, and created a CI/CD pipeline using Maven and Docker
+- Containerized the Java application using a custom **Dockerfile**, validated images locally, and pushed them to **DockerHub** for deployment
+- Performed manual deployment on EC2 by pulling Docker images, running containers, and validating application access via public DNS
+- Automated deployments through Jenkins by building Docker images, pushing to DockerHub, and deploying to EC2 on every GitHub commit
+- Implemented secure database integration by provisioning **RDS MySQL**, configuring SG rules, and validating EC2 → RDS connectivity using MySQL CLI
+- Verified ALB routing, health checks, and application availability through ALB DNS endpoints
+- Achieved a production‑ready setup with CI/CD pipelines, containerized workloads, automated deployments, and secure database connectivity
+- Documented the entire journey (Day 1 → Day 6) as part of the **Cloud & DevOps Learning Curve Series**, showcasing real‑world DevOps workflows
 
   
 
