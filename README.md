@@ -17,7 +17,7 @@ aws ec2 create-tags --resources <YOUR_VPC_ID> --tags Key=Name,Value=Existing-VPC
 ```
 aws ec2 create-subnet --vpc-id <vpc-id> --cidr-block 10.0.1.0/24 --availability-zone us-east-1a --tag-specifications 'ResourceType=subnet,Tags=[{Key=Name,Value=My_Subnet}]'
 ```
-#### Set up an Internet Gateway:
+#### Create an Internet Gateway:
 ```
 aws ec2 create-internet-gateway
  aws ec2 attach-internet-gateway --vpc-id <vpc-id> --internet-gateway-id <igw-id> --tag-specifications 'ResourceType=internet-gateway,Tags=[{Key=Name,Value=My_IGW}]'
